@@ -1,0 +1,125 @@
+@import "compass/typography/vertical_rhythm";
+
+$bold: 800;
+$normal: 300;
+
+$sans-serif: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+$text-color-black: #000;
+
+$grid-background-baseline-height: $base-line-height;
+
+@include establish-baseline;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $sans-serif;
+  // @include debug-vertical-alignment;
+}
+
+.container {
+  text-align: center;
+  max-width: 30rem;
+  padding: 1.5rem;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-weight: $normal;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.beer {
+  margin: 0.75rem 0;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #F9CC3D;
+  border-width: 1px 0;
+  margin: 1.5rem 0;
+  padding: 0;
+  border-spacing: 0px;
+  border-collapse: separate;
+}
+
+tr {
+  height: 47px;
+
+  &:last-child {
+    td {
+      border-bottom: 0;
+    }
+  }
+}
+
+td {
+  padding: 0;
+  border-bottom: 1px solid #eee;
+
+  span {
+    font-weight: $bold;
+  }
+}
+
+.sm {
+  display: none;
+}
+
+.lg {
+  display: table;
+}
+
+iframe {
+  width: 100%;
+  height: 350px;
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  tr {
+    height: 72px;
+  }
+
+  td span {
+    display: block;
+  }
+
+  .sm {
+    display: table;
+  }
+
+  .lg {
+    display: none;
+  }
+}
+
